@@ -137,13 +137,3 @@ print("!!!THANKS FOR PLAYING!!!")
 
    ```python
    choices = ['stone', 'paper', 'scissors']
-   ```
-
----
-
-## 💡 Suggested Improved Version (Short Fix)
-
-```python
-choices = ['stone', 'paper', 'scissors']
-you = input("YOUR TURN ---> ").lower()
-```
