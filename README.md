@@ -1,7 +1,3 @@
-Great 👍 this is your **corrected Stone–Paper–Scissors game**, and now it works properly. Here’s a **clear explanation of this version**:
-
----
-
 ## 🔹 1. Welcome & Rules
 
 ```python
