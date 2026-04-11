@@ -1,139 +1,77 @@
-## 🔹 1. Welcome & Rules
+---
 
-```python
-print("WELCOME TO THE GAME...")
-```
-
-* Displays the game title and rules
-* Tells the user:
-
-  * Don’t use CAPS
-  * Press ENTER to confirm choice
-  * No changing input
-  * Spell correctly
-
-```python
-input()
-```
-
-* Waits for user to press ENTER before starting
+This program is a **console-based Stone–Paper–Scissors game** where the user can choose to play either with a **bot (computer)** or with a **friend**.
 
 ---
 
-## 🔹 2. Mode Selection
+### 🔹 Game Start
 
-```python
-p = input("with whom do you want to play...")
-```
-
-User chooses:
-
-* `"bot"` → play with computer 🤖
-* `"freind"` (or anything else) → play with another player 👥
+* The program begins by printing a **welcome message** and the **rules of the game**.
+* It then waits for the user to press **ENTER** to begin.
 
 ---
 
-## 🔹 3. Bot Mode 🤖
+### 🔹 Mode Selection
 
-```python
-if(p == 'bot'):
-```
+* The user is asked to choose how they want to play:
 
-### 📦 Setup
-
-```python
-import random
-list = ['stone', 'paper', 'scissors']
-```
-
-* Uses `random` module
-* Stores possible choices
+  * With a **friend**
+  * With a **bot**
+* Based on the user’s choice, the program moves into the selected mode.
 
 ---
 
-### 🎮 Player & Bot Moves
+### 🔹 Bot Mode 🤖
 
-```python
-you = input(...)
-bot = random.choice(list)
-```
+* The computer randomly selects one option from:
 
-* Player enters their move
-* Bot randomly selects one
+  * stone
+  * paper
+  * scissors
+* The user also enters their choice.
+* Both choices are displayed.
 
----
+#### Result Decision:
 
-### ⚖️ Result Logic
+* If both choices are the same → **It’s a tie**
+* Otherwise:
 
-```python
-if(you == bot):
-```
-
-* Same choice → **Tie**
-
-Winning conditions:
-
-* stone beats scissors
-* paper beats stone
-* scissors beats paper
-
-If none match → bot wins
+  * stone beats scissors
+  * paper beats stone
+  * scissors beats paper
+* The winner is displayed accordingly.
 
 ---
 
-## 🔹 4. Friend Mode 👥
+### 🔹 Friend Mode 👥
 
-```python
-else:
-```
+* Two players take turns entering their choices.
+* The program compares both inputs.
 
-### 🎮 Inputs
+#### Result Decision:
 
-```python
-player1 = input(...)
-player2 = input(...)
-```
+* If both players choose the same → **Tie**
+* Otherwise:
 
-* Two players enter choices
-
----
-
-### ⚖️ Result Logic
-
-* Same choice → Tie
-* Player 1 wins if:
-
-  * stone > scissors
-  * paper > stone
-  * scissors > paper
-* Otherwise → Player 2 wins
+  * stone beats scissors
+  * paper beats stone
+  * scissors beats paper
+* The program announces whether **Player 1** or **Player 2** wins.
 
 ---
 
-## 🔹 5. Ending
+### 🔹 Game End
 
-```python
-print("!!!THANKS FOR PLAYING!!!")
-```
-
-* Shows game over message
+* After showing the result, the program displays a **thank you message** and ends the game.
 
 ---
 
-## ✅ What’s Good in Your Code
+### ✅ Overall Description
 
-✔ Correct game logic
-✔ Bot using `random`
-✔ Clean if-elif conditions
-✔ Supports both modes
+This program:
 
----
+* Simulates the classic **Stone–Paper–Scissors game**
+* Supports both **single-player (bot)** and **two-player modes**
+* Uses conditional logic to determine the winner
+* Uses random selection for the bot’s move
 
-3. **Using `list` as variable name**
-
-   * `list` is a built-in Python keyword
-
-   ✅ Better:
-
-   ```python
-   choices = ['stone', 'paper', 'scissors']
